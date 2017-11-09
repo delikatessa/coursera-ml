@@ -1,0 +1,163 @@
+>> load featuresX.dat
+>> load priceY.dat
+>> v = priceY(1:10)
+v =
+
+   3999
+   3299
+   3690
+   2320
+   5399
+   2999
+   3149
+   1989
+   2120
+   2425
+
+>> save hello.mat v
+>> clear
+>> whos
+>> who
+>> load hello.mat
+>> whos
+Variables in the current scope:
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  ===== 
+        v          10x1                         80  double
+
+Total is 10 elements using 80 bytes
+
+>> v
+v =
+
+   3999
+   3299
+   3690
+   2320
+   5399
+   2999
+   3149
+   1989
+   2120
+   2425
+
+>> save hello.txt v -ascii % human readable format
+>> save hello.mat v % binary format
+>> A = [1 2; 3 4; 5 6]
+A =
+
+   1   2
+   3   4
+   5   6
+
+>> A(3,2) % matrix element
+ans =  6
+>> A(2,:) % matrix row 2
+ans =
+
+   3   4
+
+>> A(:,2) % matrix column 2
+ans =
+
+   2
+   4
+   6
+
+>> A(4, 6) % non existing element
+error: A(4,_): but A has size 3x2
+>> A(4, :) % non existing row/column
+error: A(4,_): but A has size 3x2
+>> A([1 3], :) % matrix rows with indexes 1 and 3
+ans =
+
+   1   2
+   5   6
+
+>> A([1 4], :) % matrix rows with indexes 1 and 4
+error: A(4,_): but A has size 3x2
+>> A(:,2) = [10; 11; 12] % column reassignment
+A =
+
+    1   10
+    3   11
+    5   12
+
+>> A = [A, [100; 101; 102]]; % append another column vector to right
+>> A
+A =
+
+     1    10   100
+     3    11   101
+     5    12   102
+
+>> size(A)
+ans =
+
+   3   3
+
+>> A(:) % put all elements in A into a single column vector
+ans =
+
+     1
+     3
+     5
+    10
+    11
+    12
+   100
+   101
+   102
+
+>> A = [1 2; 3 4; 5 6]
+A =
+
+   1   2
+   3   4
+   5   6
+
+>> B = [11 12; 13 14; 15 16]
+B =
+
+   11   12
+   13   14
+   15   16
+
+>> C = [A B]
+C =
+
+    1    2   11   12
+    3    4   13   14
+    5    6   15   16
+
+>> C = [A; B]
+C =
+
+    1    2
+    3    4
+    5    6
+   11   12
+   13   14
+   15   16
+
+>> size(C)
+ans =
+
+   6   2
+
+>> [A B]
+ans =
+
+    1    2   11   12
+    3    4   13   14
+    5    6   15   16
+
+>> [A, B]
+ans =
+
+    1    2   11   12
+    3    4   13   14
+    5    6   15   16
+
+>> diary 'moving_data_around'

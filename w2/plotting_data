@@ -1,0 +1,50 @@
+>> t = [0:0.01:0.98];
+>> y1 = sin(2*pi*4*t);
+>> plot(t,y1);
+>> y2 = cos(2*pi*4*t);
+>> plot(t, y2);
+>> plot(t,y1);
+>> hold on; % plot the next one over
+>> plot(t,y2,'r'); % plot in red color
+>> xlabel('time') % x-axis label
+>> ylabel('value') % y-axis label
+>> legend('sin', 'cos') % add legend
+>> title('my plot') % add title
+>> print -dpng 'myPlot.png' % save plot in png format
+>> close % close figure
+>> figure(1); plot(t,y1);
+>> figure(2); plot(t,y2);
+>> % now there are 2 opened figures
+>> subplot(1,2,1); % divides plot a 1x2 grid, acces first element
+>> plot(t,y1); % show first element
+>> subplot(1,2,2); % divides plot a 1x2 grid, access second element
+>> plot(t,y2); % show second element
+>> axis([0.5 1 -1 1]) % sets axis ranges
+>> print -dpng 'myGridPlot.png'
+>> clf; % clear plot
+>> A = magic(5)
+A =
+
+   17   24    1    8   15
+   23    5    7   14   16
+    4    6   13   20   22
+   10   12   19   21    3
+   11   18   25    2    9
+
+>> imagesc(A) % plot matrix as 5x5 grid of colors
+>> print -dpng 'myMagicMatrix.png'
+>> imagesc(A), colorbar, colormap gray;
+>> print -dpng 'myGrayMagicMatrix.png'
+>> A(1,2)
+ans =  24
+>> A(4,5)
+ans =  3
+>> imagesc(magic(15)), colorbar, colormap gray;
+>> print -dpng 'myBigGrayMagicMatrix.png'
+>> clf
+>> a=1, b=2,c=3 %command chaining
+a =  1
+b =  2
+c =  3
+>> a=1; b=2; c=3; % command chaining of function calls
+>> diary off
