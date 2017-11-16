@@ -1,0 +1,1889 @@
+>> warmUpExercise
+ans =
+
+Diagonal Matrix
+
+   1   0   0   0   0
+   0   1   0   0   0
+   0   0   1   0   0
+   0   0   0   1   0
+   0   0   0   0   1
+
+>> ex1
+Running warmUpExercise ... 
+5x5 Identity Matrix: 
+ans =
+
+Diagonal Matrix
+
+   1   0   0   0   0
+   0   1   0   0   0
+   0   0   1   0   0
+   0   0   0   1   0
+   0   0   0   0   1
+
+Program paused. Press enter to continue.
+Plotting Data ...
+Program paused. Press enter to continue.
+
+Testing the cost function ...
+With theta = [0 ; 0]
+Cost computed = 0.000000
+Expected cost value (approx) 32.07
+
+With theta = [-1 ; 2]
+Cost computed = 0.000000
+Expected cost value (approx) 54.24
+Program paused. Press enter to continue.
+
+Running Gradient Descent ...
+Theta found by gradient descent:
+0.000000
+0.000000
+Expected theta values (approx)
+ -3.6303
+  1.1664
+
+warning: legend: ignoring extra labels
+warning: called from
+    legend at line 428 column 9
+    ex1 at line 88 column 1
+For population = 35,000, we predict a profit of 0.000000
+For population = 70,000, we predict a profit of 0.000000
+Program paused. Press enter to continue.
+Visualizing J(theta_0, theta_1) ...
+>> ex1
+Running warmUpExercise ... 
+5x5 Identity Matrix: 
+ans =
+
+Diagonal Matrix
+
+   1   0   0   0   0
+   0   1   0   0   0
+   0   0   1   0   0
+   0   0   0   1   0
+   0   0   0   0   1
+
+Program paused. Press enter to continue.
+Plotting Data ...
+Program paused. Press enter to continue.
+
+Testing the cost function ...
+With theta = [0 ; 0]
+Cost computed = 0.000000
+Expected cost value (approx) 32.07
+
+With theta = [-1 ; 2]
+Cost computed = 0.000000
+Expected cost value (approx) 54.24
+Program paused. Press enter to continue.
+
+Running Gradient Descent ...
+Theta found by gradient descent:
+0.000000
+0.000000
+Expected theta values (approx)
+ -3.6303
+  1.1664
+
+warning: legend: ignoring extra labels
+warning: called from
+    legend at line 428 column 9
+    ex1 at line 88 column 1
+For population = 35,000, we predict a profit of 0.000000
+For population = 70,000, we predict a profit of 0.000000
+Program paused. Press enter to continue.
+Visualizing J(theta_0, theta_1) ...
+>> 
+>> submit
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (t.sandanova@gmail.com)? (Y/n): y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Warm-up Exercise |  10 /  10 | Nice work!
+==           Computing Cost (for One Variable) |   0 /  40 | 
+==         Gradient Descent (for One Variable) |   0 /  50 | 
+==                       Feature Normalization |   0 /   0 | 
+==     Computing Cost (for Multiple Variables) |   0 /   0 | 
+==   Gradient Descent (for Multiple Variables) |   0 /   0 | 
+==                            Normal Equations |   0 /   0 | 
+==                                   --------------------------------
+==                                             |  10 / 100 | 
+== 
+>> data = load('ex1data1.txt');
+>> ex1
+Running warmUpExercise ... 
+5x5 Identity Matrix: 
+ans =
+
+Diagonal Matrix
+
+   1  0   0   0   0 
+  0    1  0   0   0 
+  0   0    1  0   0 
+  0   0   0    1  0 
+  0   0   0   0    1
+
+Program paused. Press enter to continue.
+Plotting Data ...
+Program paused. Press enter to continue.
+
+Testing the cost function ...
+With theta = [0 ; 0]
+Cost computed = 0.000000
+Expected cost value (approx) 32.07
+
+With theta = [-1 ; 2]
+Cost computed = 0.000000
+Expected cost value (approx) 54.24
+Program paused. Press enter to continue.
+
+Running Gradient Descent ...
+Theta found by gradient descent:
+0.000000
+0.000000
+Expected theta values (approx)
+ -3.6303
+  1.1664
+
+warning: legend: ignoring extra labels
+warning: called from
+    legend at line 428 column 9
+    ex1 at line 88 column 1
+For population = 35,000, we predict a profit of 0.000000
+For population = 70,000, we predict a profit of 0.000000
+Program paused. Press enter to continue.
+Visualizing J(theta_0, theta_1) ...
+>> ex1
+Running warmUpExercise ... 
+5x5 Identity Matrix: 
+ans =
+
+Diagonal Matrix
+
+   1  0   0   0   0 
+  0    1  0   0   0 
+  0   0    1  0   0 
+  0   0   0    1  0 
+  0   0   0   0    1
+
+Program paused. Press enter to continue.
+Plotting Data ...
+Program paused. Press enter to continue.
+
+Testing the cost function ...
+With theta = [0 ; 0]
+Cost computed = 0.000000
+Expected cost value (approx) 32.07
+
+With theta = [-1 ; 2]
+Cost computed = 0.000000
+Expected cost value (approx) 54.24
+Program paused. Press enter to continue.
+
+Running Gradient Descent ...
+Theta found by gradient descent:
+0.000000
+0.000000
+Expected theta values (approx)
+ -3.6303
+  1.1664
+
+warning: legend: ignoring extra labels
+warning: called from
+    legend at line 428 column 9
+    ex1 at line 88 column 1
+For population = 35,000, we predict a profit of 0.000000
+For population = 70,000, we predict a profit of 0.000000
+Program paused. Press enter to continue.
+Visualizing J(theta_0, theta_1) ...
+
+>> 
+>> 
+>> 
+>> X = data(:,1);
+>> y = data(:,2);
+>> m = length(y)
+m =  97
+>> plotData(X,y);
+>> X = [ones(m,1),X];
+>> size(X)
+ans =
+
+   97    2
+
+>> theta = zeros(2,1)
+theta =
+
+   0
+   0
+
+>> h = theta' *x;
+error: 'x' undefined near line 1 column 12
+>> h = theta' *X;
+error: operator *: nonconformant arguments (op1 is 1x2, op2 is 97x2)
+>> size(theta)
+ans =
+
+   2   1
+
+>> for i=1:m,
+> h(i) = theta' * X(i,:),
+> ned;
+> end;
+error: operator *: nonconformant arguments (op1 is 1x2, op2 is 1x2)
+>> for i=1:m, h(i) = theta * X(i,:), end;
+error: =: nonconformant arguments (op1 is 1x1, op2 is 2x2)
+>> for i=1:m, h(i) = theta' * X(i,:), end;
+error: operator *: nonconformant arguments (op1 is 1x2, op2 is 1x2)
+>> theta
+theta =
+
+   0
+   0
+
+>> iterations = 1500;
+>> alpha = 0.01;
+>> size(X, 1)
+ans =  97
+>> h = X*theta
+h =
+
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+
+>> J = 1/(2*m) * sum((h-y).^2))
+parse error:
+
+  syntax error
+
+>>> J = 1/(2*m) * sum((h-y).^2))
+                               ^
+
+>> J = 1/(2*m) * sum((h-y).^2)
+J =  32.073
+>> predictions = X*theta;
+>> size(predictions)
+ans =
+
+   97    1
+
+>> submit
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (t.sandanova@gmail.com)? (Y/n): y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Warm-up Exercise |  10 /  10 | Nice work!
+==           Computing Cost (for One Variable) |  40 /  40 | Nice work!
+==         Gradient Descent (for One Variable) |   0 /  50 | 
+==                       Feature Normalization |   0 /   0 | 
+==     Computing Cost (for Multiple Variables) |   0 /   0 | 
+==   Gradient Descent (for Multiple Variables) |   0 /   0 | 
+==                            Normal Equations |   0 /   0 | 
+==                                   --------------------------------
+==                                             |  50 / 100 | 
+== 
+>> submit
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (t.sandanova@gmail.com)? (Y/n): y
+
+!! Submission failed: operator -: nonconformant arguments (op1 is 2x1, op2 is 20x2)
+
+
+Function: gradientDescent
+FileName: c:\repos\coursera-ml\w2\machine-learning-ex1\ex1\gradientDescent.m
+LineNumber: 19
+
+Please correct your code and resubmit.
+>> alpha/m * sum(X * theta - y) * X
+ans =
+
+  -0.058391  -0.356777
+  -0.058391  -0.322770
+  -0.058391  -0.497413
+  -0.058391  -0.408926
+  -0.058391  -0.342162
+  -0.058391  -0.489489
+  -0.058391  -0.436557
+  -0.058391  -0.500887
+  -0.058391  -0.378738
+  -0.058391  -0.295145
+  -0.058391  -0.333455
+  -0.058391  -0.827055
+  -0.058391  -0.334816
+  -0.058391  -0.490978
+  -0.058391  -0.329368
+  -0.058391  -0.314110
+  -0.058391  -0.371684
+  -0.058391  -0.299553
+  -0.058391  -0.375433
+  -0.058391  -0.412874
+  -0.058391  -0.361390
+  -0.058391  -1.183593
+  -0.058391  -0.320574
+  -0.058391  -0.369390
+  -0.058391  -0.324942
+  -0.058391  -1.106224
+  -0.058391  -0.749044
+  -0.058391  -0.639794
+  -0.058391  -0.769364
+  -0.058391  -1.296463
+  -0.058391  -0.306695
+  -0.058391  -0.384764
+  -0.058391  -0.540015
+  -0.058391  -0.344030
+  -0.058391  -0.479457
+  -0.058391  -0.463242
+  -0.058391  -0.472731
+  -0.058391  -0.327359
+  -0.058391  -0.749511
+  -0.058391  -0.370984
+  -0.058391  -0.315716
+  -0.058391  -0.401878
+  -0.058391  -0.683646
+  -0.058391  -0.337134
+  -0.058391  -0.456895
+  -0.058391  -0.414176
+  -0.058391  -0.296056
+  -0.058391  -0.338752
+  -0.058391  -0.683179
+  -0.058391  -0.323582
+  -0.058391  -0.440282
+  -0.058391  -0.309924
+  -0.058391  -0.433492
+  -0.058391  -0.443955
+  -0.058391  -0.369781
+  -0.058391  -0.371305
+  -0.058391  -0.366359
+  -0.058391  -0.329310
+  -0.058391  -0.543635
+  -0.058391  -0.552008
+  -0.058391  -0.515327
+  -0.058391  -0.302426
+  -0.058391  -1.242510
+  -0.058391  -0.870498
+  -0.058391  -1.107042
+  -0.058391  -0.421480
+  -0.058391  -0.484362
+  -0.058391  -0.597694
+  -0.058391  -0.321117
+  -0.058391  -1.187738
+  -0.058391  -0.591855
+  -0.058391  -0.428271
+  -0.058391  -0.350710
+  -0.058391  -0.421930
+  -0.058391  -0.293527
+  -0.058391  -0.382341
+  -0.058391  -0.440189
+  -0.058391  -0.294088
+  -0.058391  -0.599913
+  -0.058391  -0.298246
+  -0.058391  -0.334536
+  -0.058391  -0.302958
+  -0.058391  -0.371118
+  -0.058391  -0.570408
+  -0.058391  -0.380472
+  -0.058391  -0.497331
+  -0.058391  -0.536044
+  -0.058391  -0.350465
+  -0.058391  -0.322344
+  -0.058391  -0.295425
+  -0.058391  -0.333280
+  -0.058391  -0.445911
+  -0.058391  -0.342798
+  -0.058391  -0.309789
+  -0.058391  -0.484263
+  -0.058391  -0.782094
+  -0.058391  -0.317468
+
+>> size(X*theta)
+ans =
+
+   97    1
+
+>> size (X*theta-y)
+ans =
+
+   97    1
+
+>> sum(X*theta - y)
+ans = -566.40
+>> theta - alpha/m * sum(X * theta - y) * X(1, :)
+ans =
+
+   0.058391   0.356777
+   0.058391   0.356777
+
+>> X(1,:)
+ans =
+
+   1.0000   6.1101
+
+>> theta - alpha/m * sum(X * theta - y) * X(:, 1)
+error: operator -: nonconformant arguments (op1 is 2x1, op2 is 97x1)
+>> alpha/m * sum(X * theta - y) * X(:, 1)
+ans =
+
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+  -0.058391
+
+>> 
+>> size(alpha/m * sum(X * theta - y) * X(:, 1))
+ans =
+
+   97    1
+
+>> size(theta)
+ans =
+
+   2   1
+
+>> sum(X * theta - y)
+ans = -566.40
+>> sum(X(1,:) * theta - y)
+ans = -566.40
+>> sum(X(2,:) * theta - y)
+ans = -566.40
+>> X(1, :)
+ans =
+
+   1.0000   6.1101
+
+>> X:1, 1)
+parse error:
+
+  syntax error
+
+>>> X:1, 1)
+          ^
+
+>> X(:,1)
+ans =
+
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+
+>> X(:,2)
+ans =
+
+    6.1101
+    5.5277
+    8.5186
+    7.0032
+    5.8598
+    8.3829
+    7.4764
+    8.5781
+    6.4862
+    5.0546
+    5.7107
+   14.1640
+    5.7340
+    8.4084
+    5.6407
+    5.3794
+    6.3654
+    5.1301
+    6.4296
+    7.0708
+    6.1891
+   20.2700
+    5.4901
+    6.3261
+    5.5649
+   18.9450
+   12.8280
+   10.9570
+   13.1760
+   22.2030
+    5.2524
+    6.5894
+    9.2482
+    5.8918
+    8.2111
+    7.9334
+    8.0959
+    5.6063
+   12.8360
+    6.3534
+    5.4069
+    6.8825
+   11.7080
+    5.7737
+    7.8247
+    7.0931
+    5.0702
+    5.8014
+   11.7000
+    5.5416
+    7.5402
+    5.3077
+    7.4239
+    7.6031
+    6.3328
+    6.3589
+    6.2742
+    5.6397
+    9.3102
+    9.4536
+    8.8254
+    5.1793
+   21.2790
+   14.9080
+   18.9590
+    7.2182
+    8.2951
+   10.2360
+    5.4994
+   20.3410
+   10.1360
+    7.3345
+    6.0062
+    7.2259
+    5.0269
+    6.5479
+    7.5386
+    5.0365
+   10.2740
+    5.1077
+    5.7292
+    5.1884
+    6.3557
+    9.7687
+    6.5159
+    8.5172
+    9.1802
+    6.0020
+    5.5204
+    5.0594
+    5.7077
+    7.6366
+    5.8707
+    5.3054
+    8.2934
+   13.3940
+    5.4369
+
+>> sum((X * theta - y) * X))
+parse error:
+
+  syntax error
+
+>>> sum((X * theta - y) * X))
+                            ^
+
+>> sum((X * theta - y) * X)
+error: operator *: nonconformant arguments (op1 is 97x1, op2 is 97x2)
+>> sum((X * theta - y) * X')
+error: operator *: nonconformant arguments (op1 is 97x1, op2 is 2x97)
+>> sum(X * (X * theta - y))
+error: operator *: nonconformant arguments (op1 is 97x2, op2 is 97x1)
+>> sum(X' * (X * theta - y))
+ans = -6903.3
+>> sum((X * theta - y)'*X)
+ans = -6903.3
+>> sum((X * theta - y)'*X')
+error: operator *: nonconformant arguments (op1 is 1x97, op2 is 2x97)
+>> sum(X * (X * theta - y)')
+error: operator *: nonconformant arguments (op1 is 97x2, op2 is 1x97)
+>> sum(X' * (X * theta - y))
+ans = -6903.3
+>> sum((X * theta - y))
+ans = -566.40
+>> size(sum((X * theta - y)))
+ans =
+
+   1   1
+
+>> sum((X * theta - y)) * X(1,:)
+ans =
+
+   -566.40  -3460.74
+
+>> sum((X(1,:) * theta - y)) * X(1,:)
+ans =
+
+   -566.40  -3460.74
+
+>> size(X)
+ans =
+
+   97    2
+
+>> size(X)(2)
+ans =  2
+>> size(X * theta - y)
+ans =
+
+   97    1
+
+>> size((X * theta - y) * X)
+error: operator *: nonconformant arguments (op1 is 97x1, op2 is 97x2)
+>> size(X * (X * theta - y))
+error: operator *: nonconformant arguments (op1 is 97x2, op2 is 97x1)
+>> size((X * theta - y) * X')
+error: operator *: nonconformant arguments (op1 is 97x1, op2 is 2x97)
+>> size((X * theta - y)' * X)
+ans =
+
+   1   2
+
+>> sum((X * theta - y)' * X)
+ans = -6903.3
+>> size((X * theta - y)' * X)
+ans =
+
+   1   2
+
+>> size((X * theta - y) * X)
+error: operator *: nonconformant arguments (op1 is 97x1, op2 is 97x2)
+>> size((X * theta))
+ans =
+
+   97    1
+
+>> siez(X)
+error: 'siez' undefined near line 1 column 1
+>> size(X)
+ans =
+
+   97    2
+
+>> size((X * theta - y))
+ans =
+
+   97    1
+
+>> sum((X * theta - y))*X
+ans =
+
+  -5.6640e+002  -3.4607e+003
+  -5.6640e+002  -3.1309e+003
+  -5.6640e+002  -4.8249e+003
+  -5.6640e+002  -3.9666e+003
+  -5.6640e+002  -3.3190e+003
+  -5.6640e+002  -4.7480e+003
+  -5.6640e+002  -4.2346e+003
+  -5.6640e+002  -4.8586e+003
+  -5.6640e+002  -3.6738e+003
+  -5.6640e+002  -2.8629e+003
+  -5.6640e+002  -3.2345e+003
+  -5.6640e+002  -8.0224e+003
+  -5.6640e+002  -3.2477e+003
+  -5.6640e+002  -4.7625e+003
+  -5.6640e+002  -3.1949e+003
+  -5.6640e+002  -3.0469e+003
+  -5.6640e+002  -3.6053e+003
+  -5.6640e+002  -2.9057e+003
+  -5.6640e+002  -3.6417e+003
+  -5.6640e+002  -4.0049e+003
+  -5.6640e+002  -3.5055e+003
+  -5.6640e+002  -1.1481e+004
+  -5.6640e+002  -3.1096e+003
+  -5.6640e+002  -3.5831e+003
+  -5.6640e+002  -3.1519e+003
+  -5.6640e+002  -1.0730e+004
+  -5.6640e+002  -7.2657e+003
+  -5.6640e+002  -6.2060e+003
+  -5.6640e+002  -7.4628e+003
+  -5.6640e+002  -1.2576e+004
+  -5.6640e+002  -2.9749e+003
+  -5.6640e+002  -3.7322e+003
+  -5.6640e+002  -5.2381e+003
+  -5.6640e+002  -3.3371e+003
+  -5.6640e+002  -4.6507e+003
+  -5.6640e+002  -4.4934e+003
+  -5.6640e+002  -4.5855e+003
+  -5.6640e+002  -3.1754e+003
+  -5.6640e+002  -7.2703e+003
+  -5.6640e+002  -3.5985e+003
+  -5.6640e+002  -3.0624e+003
+  -5.6640e+002  -3.8982e+003
+  -5.6640e+002  -6.6314e+003
+  -5.6640e+002  -3.2702e+003
+  -5.6640e+002  -4.4319e+003
+  -5.6640e+002  -4.0175e+003
+  -5.6640e+002  -2.8717e+003
+  -5.6640e+002  -3.2859e+003
+  -5.6640e+002  -6.6268e+003
+  -5.6640e+002  -3.1387e+003
+  -5.6640e+002  -4.2707e+003
+  -5.6640e+002  -3.0063e+003
+  -5.6640e+002  -4.2049e+003
+  -5.6640e+002  -4.3064e+003
+  -5.6640e+002  -3.5869e+003
+  -5.6640e+002  -3.6017e+003
+  -5.6640e+002  -3.5537e+003
+  -5.6640e+002  -3.1943e+003
+  -5.6640e+002  -5.2733e+003
+  -5.6640e+002  -5.3545e+003
+  -5.6640e+002  -4.9987e+003
+  -5.6640e+002  -2.9335e+003
+  -5.6640e+002  -1.2052e+004
+  -5.6640e+002  -8.4438e+003
+  -5.6640e+002  -1.0738e+004
+  -5.6640e+002  -4.0884e+003
+  -5.6640e+002  -4.6983e+003
+  -5.6640e+002  -5.7976e+003
+  -5.6640e+002  -3.1148e+003
+  -5.6640e+002  -1.1521e+004
+  -5.6640e+002  -5.7410e+003
+  -5.6640e+002  -4.1542e+003
+  -5.6640e+002  -3.4019e+003
+  -5.6640e+002  -4.0927e+003
+  -5.6640e+002  -2.8472e+003
+  -5.6640e+002  -3.7087e+003
+  -5.6640e+002  -4.2698e+003
+  -5.6640e+002  -2.8527e+003
+  -5.6640e+002  -5.8192e+003
+  -5.6640e+002  -2.8930e+003
+  -5.6640e+002  -3.2450e+003
+  -5.6640e+002  -2.9387e+003
+  -5.6640e+002  -3.5998e+003
+  -5.6640e+002  -5.5330e+003
+  -5.6640e+002  -3.6906e+003
+  -5.6640e+002  -4.8241e+003
+  -5.6640e+002  -5.1996e+003
+  -5.6640e+002  -3.3995e+003
+  -5.6640e+002  -3.1267e+003
+  -5.6640e+002  -2.8656e+003
+  -5.6640e+002  -3.2328e+003
+  -5.6640e+002  -4.3253e+003
+  -5.6640e+002  -3.3251e+003
+  -5.6640e+002  -3.0050e+003
+  -5.6640e+002  -4.6973e+003
+  -5.6640e+002  -7.5863e+003
+  -5.6640e+002  -3.0794e+003
+
+>> X * sum((X * theta - y))
+ans =
+
+  -5.6640e+002  -3.4607e+003
+  -5.6640e+002  -3.1309e+003
+  -5.6640e+002  -4.8249e+003
+  -5.6640e+002  -3.9666e+003
+  -5.6640e+002  -3.3190e+003
+  -5.6640e+002  -4.7480e+003
+  -5.6640e+002  -4.2346e+003
+  -5.6640e+002  -4.8586e+003
+  -5.6640e+002  -3.6738e+003
+  -5.6640e+002  -2.8629e+003
+  -5.6640e+002  -3.2345e+003
+  -5.6640e+002  -8.0224e+003
+  -5.6640e+002  -3.2477e+003
+  -5.6640e+002  -4.7625e+003
+  -5.6640e+002  -3.1949e+003
+  -5.6640e+002  -3.0469e+003
+  -5.6640e+002  -3.6053e+003
+  -5.6640e+002  -2.9057e+003
+  -5.6640e+002  -3.6417e+003
+  -5.6640e+002  -4.0049e+003
+  -5.6640e+002  -3.5055e+003
+  -5.6640e+002  -1.1481e+004
+  -5.6640e+002  -3.1096e+003
+  -5.6640e+002  -3.5831e+003
+  -5.6640e+002  -3.1519e+003
+  -5.6640e+002  -1.0730e+004
+  -5.6640e+002  -7.2657e+003
+  -5.6640e+002  -6.2060e+003
+  -5.6640e+002  -7.4628e+003
+  -5.6640e+002  -1.2576e+004
+  -5.6640e+002  -2.9749e+003
+  -5.6640e+002  -3.7322e+003
+  -5.6640e+002  -5.2381e+003
+  -5.6640e+002  -3.3371e+003
+  -5.6640e+002  -4.6507e+003
+  -5.6640e+002  -4.4934e+003
+  -5.6640e+002  -4.5855e+003
+  -5.6640e+002  -3.1754e+003
+  -5.6640e+002  -7.2703e+003
+  -5.6640e+002  -3.5985e+003
+  -5.6640e+002  -3.0624e+003
+  -5.6640e+002  -3.8982e+003
+  -5.6640e+002  -6.6314e+003
+  -5.6640e+002  -3.2702e+003
+  -5.6640e+002  -4.4319e+003
+  -5.6640e+002  -4.0175e+003
+  -5.6640e+002  -2.8717e+003
+  -5.6640e+002  -3.2859e+003
+  -5.6640e+002  -6.6268e+003
+  -5.6640e+002  -3.1387e+003
+  -5.6640e+002  -4.2707e+003
+  -5.6640e+002  -3.0063e+003
+  -5.6640e+002  -4.2049e+003
+  -5.6640e+002  -4.3064e+003
+  -5.6640e+002  -3.5869e+003
+  -5.6640e+002  -3.6017e+003
+  -5.6640e+002  -3.5537e+003
+  -5.6640e+002  -3.1943e+003
+  -5.6640e+002  -5.2733e+003
+  -5.6640e+002  -5.3545e+003
+  -5.6640e+002  -4.9987e+003
+  -5.6640e+002  -2.9335e+003
+  -5.6640e+002  -1.2052e+004
+  -5.6640e+002  -8.4438e+003
+  -5.6640e+002  -1.0738e+004
+  -5.6640e+002  -4.0884e+003
+  -5.6640e+002  -4.6983e+003
+  -5.6640e+002  -5.7976e+003
+  -5.6640e+002  -3.1148e+003
+  -5.6640e+002  -1.1521e+004
+  -5.6640e+002  -5.7410e+003
+  -5.6640e+002  -4.1542e+003
+  -5.6640e+002  -3.4019e+003
+  -5.6640e+002  -4.0927e+003
+  -5.6640e+002  -2.8472e+003
+  -5.6640e+002  -3.7087e+003
+  -5.6640e+002  -4.2698e+003
+  -5.6640e+002  -2.8527e+003
+  -5.6640e+002  -5.8192e+003
+  -5.6640e+002  -2.8930e+003
+  -5.6640e+002  -3.2450e+003
+  -5.6640e+002  -2.9387e+003
+  -5.6640e+002  -3.5998e+003
+  -5.6640e+002  -5.5330e+003
+  -5.6640e+002  -3.6906e+003
+  -5.6640e+002  -4.8241e+003
+  -5.6640e+002  -5.1996e+003
+  -5.6640e+002  -3.3995e+003
+  -5.6640e+002  -3.1267e+003
+  -5.6640e+002  -2.8656e+003
+  -5.6640e+002  -3.2328e+003
+  -5.6640e+002  -4.3253e+003
+  -5.6640e+002  -3.3251e+003
+  -5.6640e+002  -3.0050e+003
+  -5.6640e+002  -4.6973e+003
+  -5.6640e+002  -7.5863e+003
+  -5.6640e+002  -3.0794e+003
+
+>> submit
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (t.sandanova@gmail.com)? (Y/n): y
+
+!! Submission failed: =: nonconformant arguments (op1 is 1x1, op2 is 1x2)
+
+
+Function: gradientDescent
+FileName: c:\repos\coursera-ml\w2\machine-learning-ex1\ex1\gradientDescent.m
+LineNumber: 21
+
+Please correct your code and resubmit.
+>> submit
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (t.sandanova@gmail.com)? (Y/n): y
+
+!! Submission failed: =: nonconformant arguments (op1 is 1x1, op2 is 1x2)
+
+
+Function: gradientDescent
+FileName: c:\repos\coursera-ml\w2\machine-learning-ex1\ex1\gradientDescent.m
+LineNumber: 21
+
+Please correct your code and resubmit.
+>> size(X * theta - y)
+ans =
+
+   97    1
+
+>> size((X * theta - y)*X)
+error: operator *: nonconformant arguments (op1 is 97x1, op2 is 97x2)
+>> size((X(1,:) * theta - y)*X(1,:))
+ans =
+
+   97    2
+
+>> X(1,:)
+ans =
+
+   1.0000   6.1101
+
+>> size((X * theta - y)*X')
+error: operator *: nonconformant arguments (op1 is 97x1, op2 is 2x97)
+>> size(X * (X * theta - y))
+error: operator *: nonconformant arguments (op1 is 97x2, op2 is 97x1)
+>> size(X' * (X * theta - y))
+ans =
+
+   2   1
+
+>> X' * (X * theta - y)
+ans =
+
+   -566.40
+  -6336.90
+
+>> submit
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (t.sandanova@gmail.com)? (Y/n): y
+
+!! Submission failed: 'aplha' undefined near line 19 column 18
+
+
+Function: gradientDescent
+FileName: c:\repos\coursera-ml\w2\machine-learning-ex1\ex1\gradientDescent.m
+LineNumber: 19
+
+Please correct your code and resubmit.
+>> submit
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (t.sandanova@gmail.com)? (Y/n): y
+   0.65995
+   1.44514
+ 12.493
+   0.61452
+   0.88536
+ 1.2598
+   0.62818
+   1.04639
+ 0.32964
+   0.62484
+   1.00001
+ 0.25260
+   0.62639
+   1.01331
+ 0.24620
+   0.62654
+   1.00943
+ 0.24565
+   0.62709
+   1.01050
+ 0.24559
+   0.62752
+   1.01014
+ 0.24556
+   0.62798
+   1.01020
+ 0.24554
+   0.62843
+   1.01013
+ 0.24552
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Warm-up Exercise |  10 /  10 | Nice work!
+==           Computing Cost (for One Variable) |  40 /  40 | Nice work!
+==         Gradient Descent (for One Variable) |  50 /  50 | Nice work!
+==                       Feature Normalization |   0 /   0 | 
+==     Computing Cost (for Multiple Variables) |   0 /   0 | 
+==   Gradient Descent (for Multiple Variables) |   0 /   0 | 
+==                            Normal Equations |   0 /   0 | 
+==                                   --------------------------------
+==                                             | 100 / 100 | 
+== 
+>> submit
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (t.sandanova@gmail.com)? (Y/n): 
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Warm-up Exercise |  10 /  10 | Nice work!
+==           Computing Cost (for One Variable) |  40 /  40 | Nice work!
+==         Gradient Descent (for One Variable) |  50 /  50 | Nice work!
+==                       Feature Normalization |   0 /   0 | 
+==     Computing Cost (for Multiple Variables) |   0 /   0 | 
+==   Gradient Descent (for Multiple Variables) |   0 /   0 | 
+==                            Normal Equations |   0 /   0 | 
+==                                   --------------------------------
+==                                             | 100 / 100 | 
+== 
+>> y
+y =
+
+   17.59200
+    9.13020
+   13.66200
+   11.85400
+    6.82330
+   11.88600
+    4.34830
+   12.00000
+    6.59870
+    3.81660
+    3.25220
+   15.50500
+    3.15510
+    7.22580
+    0.71618
+    3.51290
+    5.30480
+    0.56077
+    3.65180
+    5.38930
+    3.13860
+   21.76700
+    4.26300
+    5.18750
+    3.08250
+   22.63800
+   13.50100
+    7.04670
+   14.69200
+   24.14700
+   -1.22000
+    5.99660
+   12.13400
+    1.84950
+    6.54260
+    4.56230
+    4.11640
+    3.39280
+   10.11700
+    5.49740
+    0.55657
+    3.91150
+    5.38540
+    2.44060
+    6.73180
+    1.04630
+    5.13370
+    1.84400
+    8.00430
+    1.01790
+    6.75040
+    1.83960
+    4.28850
+    4.99810
+    1.42330
+   -1.42110
+    2.47560
+    4.60420
+    3.96240
+    5.41410
+    5.16940
+   -0.74279
+   17.92900
+   12.05400
+   17.05400
+    4.88520
+    5.74420
+    7.77540
+    1.01730
+   20.99200
+    6.67990
+    4.02590
+    1.27840
+    3.34110
+   -2.68070
+    0.29678
+    3.88450
+    5.70140
+    6.75260
+    2.05760
+    0.47953
+    0.20421
+    0.67861
+    7.54350
+    5.34360
+    4.24150
+    6.79810
+    0.92695
+    0.15200
+    2.82140
+    1.84510
+    4.29590
+    7.20290
+    1.98690
+    0.14454
+    9.05510
+    0.61705
+
+>> 
+>> submit
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (t.sandanova@gmail.com)? (Y/n): y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Warm-up Exercise |  10 /  10 | Nice work!
+==           Computing Cost (for One Variable) |  40 /  40 | Nice work!
+==         Gradient Descent (for One Variable) |  50 /  50 | Nice work!
+==                       Feature Normalization |   0 /   0 | 
+==     Computing Cost (for Multiple Variables) |   0 /   0 | 
+==   Gradient Descent (for Multiple Variables) |   0 /   0 | 
+==                            Normal Equations |   0 /   0 | 
+==                                   --------------------------------
+==                                             | 100 / 100 | 
+== 
+>> ex1
+Running warmUpExercise ... 
+5x5 Identity Matrix: 
+ans =
+
+Diagonal Matrix
+
+   1  0   0   0   0 
+  0    1  0   0   0 
+  0   0    1  0   0 
+  0   0   0    1  0 
+  0   0   0   0    1
+
+Program paused. Press enter to continue.
+Plotting Data ...
+Program paused. Press enter to continue.
+
+Testing the cost function ...
+With theta = [0 ; 0]
+Cost computed = 32.072734
+Expected cost value (approx) 32.07
+
+With theta = [-1 ; 2]
+Cost computed = 54.242455
+Expected cost value (approx) 54.24
+Program paused. Press enter to continue.
+
+Running Gradient Descent ...
+Theta found by gradient descent:
+-3.630291
+1.166362
+Expected theta values (approx)
+ -3.6303
+  1.1664
+
+For population = 35,000, we predict a profit of 4519.767868
+For population = 70,000, we predict a profit of 45342.450129
+Program paused. Press enter to continue.
+Visualizing J(theta_0, theta_1) ...
+>> 
+>> submit
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (t.sandanova@gmail.com)? (Y/n): y
+
+!! Submission failed: product: nonconformant arguments (op1 is 2x20, op2 is 20x1)
+
+
+Function: gradientDescent
+FileName: c:\repos\coursera-ml\w2\machine-learning-ex1\ex1\gradientDescent.m
+LineNumber: 19
+
+Please correct your code and resubmit.
+>> ex1
+Running warmUpExercise ... 
+5x5 Identity Matrix: 
+ans =
+
+Diagonal Matrix
+
+   1   0   0   0   0
+   0   1   0   0   0
+   0   0   1   0   0
+   0   0   0   1   0
+   0   0   0   0   1
+
+Program paused. Press enter to continue.
+Plotting Data ...
+Program paused. Press enter to continue.
+
+Testing the cost function ...
+With theta = [0 ; 0]
+Cost computed = 32.072734
+Expected cost value (approx) 32.07
+
+With theta = [-1 ; 2]
+Cost computed = 54.242455
+Expected cost value (approx) 54.24
+Program paused. Press enter to continue.
+
+Running Gradient Descent ...
+Theta found by gradient descent:
+-3.630291
+1.166362
+Expected theta values (approx)
+ -3.6303
+  1.1664
+
+For population = 35,000, we predict a profit of 4519.767868
+For population = 70,000, we predict a profit of 45342.450129
+Program paused. Press enter to continue.
+Visualizing J(theta_0, theta_1) ...
+>> clear
+>> close
+>> close -a
+error: called from
+    close at line 77 column 7
+error: close: first argument must be "all" or a figure handle
+>> help close
+'close' is a function from the file C:\Octave\OCTAVE~1.1\share\octave\4.2.1\m\plot\util\close.m
+
+ -- close
+ -- close H
+ -- close (H)
+ -- close (H, "force")
+ -- close all
+ -- close all hidden
+ -- close all force
+     Close figure window(s).
+
+     When called with no arguments, close the current figure.  This is
+     equivalent to 'close (gcf)'.  If the input H is a graphic handle,
+     or vector of graphics handles, then close each figure in H.
+
+     If the argument "all" is given then all figures with visible
+     handles (HandleVisibility = "on") are closed.
+
+     If the argument "all hidden" is given then all figures, including
+     hidden ones, are closed.
+
+     If the argument "force" is given then figures are closed even when
+     "closerequestfcn" has been altered to prevent closing the window.
+
+     Implementation Note: 'close' operates by calling the function
+     specified by the "closerequestfcn" property for each figure.  By
+     default, the function 'closereq' is used.  It is possible that the
+     function invoked will delay or abort removing the figure.  To
+     remove a figure without executing any callback functions use
+     'delete'.  When writing a callback function to close a window do
+     not use 'close' to avoid recursion.
+
+     See also: closereq, delete.
+
+Additional help for built-in functions and operators is
+available in the online version of the manual.  Use the command
+'doc <topic>' to search the manual index.
+
+Help and information about Octave is also available on the WWW
+at http://www.octave.org and via the help@octave.org
+mailing list.
+>> help all
+'all' is a built-in function from the file libinterp/corefcn/data.cc
+
+ -- all (X)
+ -- all (X, DIM)
+     For a vector argument, return true (logical 1) if all elements of
+     the vector are nonzero.
+
+     For a matrix argument, return a row vector of logical ones and
+     zeros with each element indicating whether all of the elements of
+     the corresponding column of the matrix are nonzero.  For example:
+
+          all ([2, 3; 1, 0])
+              => [ 1, 0 ]
+
+     If the optional argument DIM is supplied, work along dimension DIM.
+
+     See also: any.
+
+Additional help for built-in functions and operators is
+available in the online version of the manual.  Use the command
+'doc <topic>' to search the manual index.
+
+Help and information about Octave is also available on the WWW
+at http://www.octave.org and via the help@octave.org
+mailing list.
+>> close all
+>> ex1
+Running warmUpExercise ... 
+5x5 Identity Matrix: 
+ans =
+
+Diagonal Matrix
+
+   1   0   0   0   0
+   0   1   0   0   0
+   0   0   1   0   0
+   0   0   0   1   0
+   0   0   0   0   1
+
+Program paused. Press enter to continue.
+Plotting Data ...
+Program paused. Press enter to continue.
+
+Testing the cost function ...
+With theta = [0 ; 0]
+Cost computed = 32.072734
+Expected cost value (approx) 32.07
+
+With theta = [-1 ; 2]
+Cost computed = 54.242455
+Expected cost value (approx) 54.24
+Program paused. Press enter to continue.
+
+Running Gradient Descent ...
+Theta found by gradient descent:
+-3.630291
+1.166362
+Expected theta values (approx)
+ -3.6303
+  1.1664
+
+For population = 35,000, we predict a profit of 4519.767868
+For population = 70,000, we predict a profit of 45342.450129
+Program paused. Press enter to continue.
+Visualizing J(theta_0, theta_1) ...
+>> close all
+>> ex1_multi
+Loading data ...
+First 10 examples from the dataset: 
+ x = [2104 3], y = 399900 
+ x = [1600 3], y = 329900 
+ x = [2400 3], y = 369000 
+ x = [1416 2], y = 232000 
+ x = [3000 4], y = 539900 
+ x = [1985 4], y = 299900 
+ x = [1534 3], y = 314900 
+ x = [1427 3], y = 198999 
+ x = [1380 3], y = 212000 
+ x = [1494 3], y = 242500 
+Program paused. Press enter to continue.
+Normalizing Features ...
+Running gradient descent ...
+Theta computed from gradient descent: 
+ 0.000000 
+ 0.000000 
+ 0.000000 
+
+Predicted price of a 1650 sq-ft, 3 br house (using gradient descent):
+ $0.000000
+Program paused. Press enter to continue.
+Solving with normal equations...
+Theta computed from the normal equations: 
+ 0.000000 
+ 0.000000 
+ 0.000000 
+
+Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
+ $0.000000
+>> (X, 2)
+parse error:
+
+  syntax error
+
+>>> (X, 2)
+      ^
+
+>> size(X, 2)
+ans =  3
+>> size(X)
+ans =
+
+   47    3
+
+>> size(X, 1)
+ans =  47
+>> X(1,:)
+ans =
+
+      1   2104      3
+
+>> ex1_multi
+Loading data ...
+First 10 examples from the dataset: 
+ x = [2104 3], y = 399900 
+ x = [1600 3], y = 329900 
+ x = [2400 3], y = 369000 
+ x = [1416 2], y = 232000 
+ x = [3000 4], y = 539900 
+ x = [1985 4], y = 299900 
+ x = [1534 3], y = 314900 
+ x = [1427 3], y = 198999 
+ x = [1380 3], y = 212000 
+ x = [1494 3], y = 242500 
+Program paused. Press enter to continue.
+Normalizing Features ...
+Running gradient descent ...
+Theta computed from gradient descent: 
+ 0.000000 
+ 0.000000 
+ 0.000000 
+
+Predicted price of a 1650 sq-ft, 3 br house (using gradient descent):
+ $0.000000
+Program paused. Press enter to continue.
+Solving with normal equations...
+Theta computed from the normal equations: 
+ 0.000000 
+ 0.000000 
+ 0.000000 
+
+Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
+ $0.000000
+>> 
+>> close
+>> submit
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (t.sandanova@gmail.com)? (Y/n): y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Warm-up Exercise |  10 /  10 | Nice work!
+==           Computing Cost (for One Variable) |  40 /  40 | Nice work!
+==         Gradient Descent (for One Variable) |  50 /  50 | Nice work!
+==                       Feature Normalization |   0 /   0 | 
+==     Computing Cost (for Multiple Variables) |   0 /   0 | 
+==   Gradient Descent (for Multiple Variables) |   0 /   0 | 
+==                            Normal Equations |   0 /   0 | 
+==                                   --------------------------------
+==                                             | 100 / 100 | 
+== 
+>> submit
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (t.sandanova@gmail.com)? (Y/n): y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Warm-up Exercise |  10 /  10 | Nice work!
+==           Computing Cost (for One Variable) |  40 /  40 | Nice work!
+==         Gradient Descent (for One Variable) |  50 /  50 | Nice work!
+==                       Feature Normalization |   0 /   0 | Nice work!
+==     Computing Cost (for Multiple Variables) |   0 /   0 | 
+==   Gradient Descent (for Multiple Variables) |   0 /   0 | 
+==                            Normal Equations |   0 /   0 | 
+==                                   --------------------------------
+==                                             | 100 / 100 | 
+== 
+>> submit
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (t.sandanova@gmail.com)? (Y/n): y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Warm-up Exercise |  10 /  10 | Nice work!
+==           Computing Cost (for One Variable) |  40 /  40 | Nice work!
+==         Gradient Descent (for One Variable) |  50 /  50 | Nice work!
+==                       Feature Normalization |   0 /   0 | Nice work!
+==     Computing Cost (for Multiple Variables) |   0 /   0 | Nice work!
+==   Gradient Descent (for Multiple Variables) |   0 /   0 | 
+==                            Normal Equations |   0 /   0 | 
+==                                   --------------------------------
+==                                             | 100 / 100 | 
+== 
+>> submit
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (t.sandanova@gmail.com)? (Y/n): y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Warm-up Exercise |  10 /  10 | Nice work!
+==           Computing Cost (for One Variable) |  40 /  40 | Nice work!
+==         Gradient Descent (for One Variable) |  50 /  50 | Nice work!
+==                       Feature Normalization |   0 /   0 | Nice work!
+==     Computing Cost (for Multiple Variables) |   0 /   0 | Nice work!
+==   Gradient Descent (for Multiple Variables) |   0 /   0 | 
+==                            Normal Equations |   0 /   0 | 
+==                                   --------------------------------
+==                                             | 100 / 100 | 
+== 
+>> submit
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (t.sandanova@gmail.com)? (Y/n): y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Warm-up Exercise |  10 /  10 | Nice work!
+==           Computing Cost (for One Variable) |  40 /  40 | Nice work!
+==         Gradient Descent (for One Variable) |  50 /  50 | Nice work!
+==                       Feature Normalization |   0 /   0 | Nice work!
+==     Computing Cost (for Multiple Variables) |   0 /   0 | Nice work!
+==   Gradient Descent (for Multiple Variables) |   0 /   0 | Nice work!
+==                            Normal Equations |   0 /   0 | 
+==                                   --------------------------------
+==                                             | 100 / 100 | 
+== 
+>> ex1_multi
+Loading data ...
+First 10 examples from the dataset: 
+ x = [2104 3], y = 399900 
+ x = [1600 3], y = 329900 
+ x = [2400 3], y = 369000 
+ x = [1416 2], y = 232000 
+ x = [3000 4], y = 539900 
+ x = [1985 4], y = 299900 
+ x = [1534 3], y = 314900 
+ x = [1427 3], y = 198999 
+ x = [1380 3], y = 212000 
+ x = [1494 3], y = 242500 
+Program paused. Press enter to continue.
+Normalizing Features ...
+Running gradient descent ...
+Theta computed from gradient descent: 
+ 334302.063993 
+ 100087.116006 
+ 3673.548451 
+
+Predicted price of a 1650 sq-ft, 3 br house (using gradient descent):
+ $0.000000
+Program paused. Press enter to continue.
+Solving with normal equations...
+Theta computed from the normal equations: 
+ 0.000000 
+ 0.000000 
+ 0.000000 
+
+Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
+ $0.000000
+>> close
+>> ex1_multi
+Loading data ...
+First 10 examples from the dataset: 
+ x = [2104 3], y = 399900 
+ x = [1600 3], y = 329900 
+ x = [2400 3], y = 369000 
+ x = [1416 2], y = 232000 
+ x = [3000 4], y = 539900 
+ x = [1985 4], y = 299900 
+ x = [1534 3], y = 314900 
+ x = [1427 3], y = 198999 
+ x = [1380 3], y = 212000 
+ x = [1494 3], y = 242500 
+Program paused. Press enter to continue.
+Normalizing Features ...
+Running gradient descent ...
+Theta computed from gradient descent: 
+ 340412.653452 
+ 110572.961931 
+ -6591.385923 
+
+Predicted price of a 1650 sq-ft, 3 br house (using gradient descent):
+ $0.000000
+Program paused. Press enter to continue.
+Solving with normal equations...
+Theta computed from the normal equations: 
+ 0.000000 
+ 0.000000 
+ 0.000000 
+
+Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
+ $0.000000
+>> ex1_multi
+Loading data ...
+First 10 examples from the dataset: 
+ x = [2104 3], y = 399900 
+ x = [1600 3], y = 329900 
+ x = [2400 3], y = 369000 
+ x = [1416 2], y = 232000 
+ x = [3000 4], y = 539900 
+ x = [1985 4], y = 299900 
+ x = [1534 3], y = 314900 
+ x = [1427 3], y = 198999 
+ x = [1380 3], y = 212000 
+ x = [1494 3], y = 242500 
+Program paused. Press enter to continue.
+Normalizing Features ...
+Running gradient descent ...
+Theta computed from gradient descent: 
+ 266180.445191 
+ 75037.932305 
+ 18970.040594 
+
+Predicted price of a 1650 sq-ft, 3 br house (using gradient descent):
+ $0.000000
+Program paused. Press enter to continue.
+Solving with normal equations...
+Theta computed from the normal equations: 
+ 0.000000 
+ 0.000000 
+ 0.000000 
+
+Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
+ $0.000000
+>> pinv(X' * X) * X' * y;
+>> pinv(X' * X) * X' * y
+ans =
+
+  8.9598e+004
+  1.3921e+002
+  -8.7380e+003
+
+>> submit
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (t.sandanova@gmail.com)? (Y/n): y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Warm-up Exercise |  10 /  10 | Nice work!
+==           Computing Cost (for One Variable) |  40 /  40 | Nice work!
+==         Gradient Descent (for One Variable) |  50 /  50 | Nice work!
+==                       Feature Normalization |   0 /   0 | Nice work!
+==     Computing Cost (for Multiple Variables) |   0 /   0 | Nice work!
+==   Gradient Descent (for Multiple Variables) |   0 /   0 | Nice work!
+==                            Normal Equations |   0 /   0 | Nice work!
+==                                   --------------------------------
+==                                             | 100 / 100 | 
+== 

@@ -1,0 +1,190 @@
+octave:3> PS1('>> ')
+>> v = zeros(10,1)
+v =
+
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+
+>> for i=1:10,
+>    v(i)=i^2;
+>  end;
+>> v
+v =
+
+     1
+     4
+     9
+    16
+    25
+    36
+    49
+    64
+    81
+   100
+
+>> indices=1:10
+indices =
+
+    1    2    3    4    5    6    7    8    9   10
+
+>> for i=indices,
+>    disp(i);
+> end;
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+ 10
+>> for i=indices,
+>    v(i) = 2^i;
+> end;
+>> v
+v =
+
+      2
+      4
+      8
+     16
+     32
+     64
+    128
+    256
+    512
+   1024
+
+>> i = 1;
+>> while i <= 5, 
+>    v(i) = 100;
+>    i = i + 1;
+>  end;
+>> v
+v =
+
+    100
+    100
+    100
+    100
+    100
+     64
+    128
+    256
+    512
+   1024
+
+>> i = 1;
+>> while true,
+>    v(i) = 999;
+>    i = i + 1;
+>    if i == 6,
+>      break;
+>    end;
+>  end;
+>> v
+v =
+
+    999
+    999
+    999
+    999
+    999
+     64
+    128
+    256
+    512
+   1024
+
+>> v(1)
+ans =  999
+>> v(1) = 2;
+>> if v(!)==1,
+parse error:
+
+  invalid use of empty argument (~) in index expression
+
+>>> if v(!)==1,
+          ^
+
+>> if v(1)==1,
+>    disp('The value is one');
+>  elseif v(1) == 2,
+>    disp('The value is two');
+>  else
+>    disp('The value is not one or two');
+>  end;
+The value is two
+>> % exit, quit
+>> squareThisNumber(5)
+ans =  25
+>> whos
+Variables in the current scope:
+
+   Attr Name         Size                     Bytes  Class
+   ==== ====         ====                     =====  ===== 
+        ans          1x1                          8  double
+        i            1x1                          8  double
+        indices      1x10                        24  double
+        v           10x1                         80  double
+
+Total is 22 elements using 120 bytes
+
+>> ls
+ Volume in drive C is Windows8_OS
+ Volume Serial Number is 3C03-8E80
+
+ Directory of c:\repos\coursera-ml\w2
+
+[.]                        myGrayMagicMatrix.png
+[..]                       myGridPlot.png
+computing_on_data          myMagicMatrix.png
+control_statements         myPlot.png
+featuresX.dat              plotting_data
+hello.mat                  priceY.dat
+hello.txt                  squareThisNumber.m
+moving_data_around         
+myBigGrayMagicMatrix.png   
+              14 File(s)         82ÿ352 bytes
+               2 Dir(s)   6ÿ083ÿ121ÿ152 bytes free
+>> addpath('C:\Repos\coursera-ml\w2') % Octave search path (advanced/optional)
+>> cd c:\repos
+>> squareThisNumber(5)
+ans =  25
+>> [a,b] = squareAndCubeThisNumber(5)
+a =  25
+b =  125
+>> X = [1 1; 1 2; 1 3];
+>> X
+X =
+
+   1   1
+   1   2
+   1   3
+
+>> y = [1; 2; 3]
+y =
+
+   1
+   2
+   3
+
+>> theta = [0;1];
+>> j = costFunctionJ(X,y,theta)
+j = 0
+>> theta = [0;0];
+>> j = costFunctionJ(X,y,theta)
+j =  2.3333
+>> (1^2 + 2^2 + 3^2)/(2*3)
+ans =  2.3333
+>> diary off
